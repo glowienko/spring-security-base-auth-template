@@ -1,0 +1,17 @@
+spring:
+  jpa:
+    database-platform: mysql
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect     
+      ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl   -> kiedy uzyć innych naming strategy
+      generate-ddl: false
+    show-sql: true
+  datasource:
+    jmx-enabled: true  #check tihs
+    url: jdbc:mysql://localhost:3306/myDb?createDatabaseIfNotExist=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
