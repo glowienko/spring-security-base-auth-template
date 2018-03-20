@@ -24,19 +24,11 @@ public class CustomWebSecurityConfigurerAdapter extends WebSecurityConfigurerAda
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.inMemoryAuthentication()
-//                .withUser(User.builder()
-//                        .username("root")
-//                        .password("root")
-//                        .authorities(USER_AUTHORITY));
-
         auth.inMemoryAuthentication()
                 .withUser(User.withDefaultPasswordEncoder()
                         .username("root")
                         .password("root")
                         .authorities(USER_AUTHORITY));
-//    }
-
     }
 
     @Override
